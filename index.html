@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- HTML !-->
+
+<html>
+    <head>
+        <title>acetaminophen dreams</title>
+        <link rel="stylesheet" href="style.css"></link>
+    </head>
+    <body>
+        <div class="div2">
+            <p id="dream"></p>
+            <button id = "dreamButton" onclick="sleep()" class="button-2" role="button">go back to sleep.</button> 
+        </div>
+        <div class="div1"></div>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <script language="javascript" src="tracery.js"></script>
+        <script language="javascript" type="text/javascript">
+            function sleep() {
+                var dream = {
+                    "dream": ["I think it was about #subject#. It happened #location#", "I was #location#.","I was lost #location#","I was #action#. You were #action#","within a dream #dream#","I was with you. #together#","I was melting #melting#.", "I was standing #location#. It happened in the #season#.", "it was #season# #location#", 
+                            "that I rose from the dead #location#.", "it was a nightmare.", "I lost my pet #animal# #location#", "#subject# came to save me from #subject#.","about #animal.s#. They were all #action#.", "about leaving", "I went on an adventure #location#", ". I know you don't want to hear about it though.",
+                            "I grew wings.", "#subject# grew wings", "it was raining #animal.s# while #together#"],
+                    "together": ["We counted the stars #location#", "We watched TV at your house.", "We sang a song.", "We wrote a song. I think it was about last #season#.", "We were laughing at cute #animal# videos", "We were laughing at something", "You showed me the #season# constellations"],
+                    "location": ["in a garden", "behind my house", "at college", "in class", "in a city", "in a grassy field", "on the moon", "on mars", "inside the earth", "in some secret place", "in the town I was born in", "in an abandoned factory", "in heaven", "somewhere really really far away", "somewhere safe"],
+                    "melting": ["into the floor", "into the walls", "with my friends. #together#", "into my bed"],
+                    "action": ["running", "jumping", "screaming", "crying", "flying", "in love with #subject#","singing", "crying over #subject#", "mowing the lawn #location#", "counting the days we have left", "reminiscing", "spiraling"],
+                    "season": ["Summer", "Spring", "Fall", "Winter"],
+                    "subject": ["angels", "you", "God", "my dad", "my mom", "my best friend", "myself", "#animal.a#","zombies", "everyone", "the devil", "your sister"],
+                    "animal": ["rabbit","dog","cat","bird", "elephant","toad", "fish", "horse", "bear", "bunny", "kitten"],
+                    "start": ["I had a dream #dream#"]
+                }
+
+                var grammar;
+                grammar = tracery.createGrammar(dream);
+                var myString = grammar.flatten("#start#");
+                document.getElementById("dream").innerHTML = myString;
+            }
+            sleep()
+        </script>
+        
+    </body>
+</html>
