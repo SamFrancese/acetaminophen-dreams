@@ -34,6 +34,12 @@ p {
     position: relative;
 }
 
+.birthday {
+    position: absolute;
+    bottom: 0px;
+    left: 16px;
+}
+
 .div1 {
     background-image: url("0a8c9ff98b055221f1797cce379ab682.jpg");
     height: 749px;

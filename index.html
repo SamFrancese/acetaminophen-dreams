@@ -12,6 +12,9 @@
             <button id = "dreamButton" onclick="sleep()" class="button-2" role="button">go back to sleep.</button> 
         </div>
         <div class="div1"></div>
+        <div class="birthday">
+            <p id="birthday text"></p>
+        </div>
         <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
         <script language="javascript" src="tracery.js"></script>
         <script language="javascript" type="text/javascript">
@@ -36,6 +39,12 @@
                 document.getElementById("dream").innerHTML = myString;
             }
             sleep()
+
+            const date = new Date();
+            if(date.getDate() == 24 && date.getMonth() + 1 == 2) {
+                //set element to happy birthday
+                document.getElementById("birthday text").innerHTML = "happy birthday mom I love you";
+            }
         </script>
         
     </body>
